@@ -54,13 +54,13 @@ export class Player {
                 enemy.y < this.y + this.height &&
                 enemy.y + enemy.height > this.y) {
                     enemy.markedforDeletion = true
-                    if (enemy instanceof cow || 
-                        enemy instanceof Carbon) {
-                            this.game.score -= 50
+                    if (enemy instanceof cow ) {
+                            this.game.score += 10
                         }
 
-                    else if (enemy instanceof Pollution) {
-                            this.game.score += 10
+                    else if (enemy instanceof Pollution ||
+                            enemy instanceof Carbon) {
+                            this.game.score -= 30
                         }
                     
                 }
